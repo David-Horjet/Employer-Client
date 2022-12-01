@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,400;1,500;1,800&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  scroll-behavior: smooth;
+  font-family: 'Open Sans', sans-serif;
+  /* overflow-x: hidden; */
+}
+
+:root {
+  --theme-color: 	#1B30AC;
+  --faded-color: #e7eaf7;
+  --pure-white: #fff;
+  --faded-white: #f5f6f9;
+  --faded2-white: #CCCCCC;
+  --pure-black: #000;
+  --faded-black: #333333;
+  --faded-black2: #666666;
+  --theme-default3: 	#1B30AC;
+  --theme-default4: 		#1B30AC;
+  --theme-gradient: linear-gradient(to right, var(--theme-default3) 0%, var(--theme-default4) 51%, var(--theme-default3) 100%);
+}
+
+a {
+  text-decoration: none !important;
+}
+.active{
+  
+}
+.avatar {
+  width: 40px;
+  border-radius: 8px;
+}
+
+img {
+  object-fit: cover;
+}
+
