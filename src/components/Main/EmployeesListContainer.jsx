@@ -8,7 +8,7 @@ import { ToastContainer } from "react-toastify";
 function EmployeesListContainer({ employees }) {
   return (
     <>
-    <Container className="bg-light col-lg-3">
+    <Container className="bg-light col-lg-9">
       <div className="container-fluid">
         <div className="page-header">
           <div className="row align-items-center">
@@ -74,8 +74,6 @@ function EmployeesListContainer({ employees }) {
 }
 
 const Container = styled.div`
-  flex: 0 0 auto;
-  width: 78%;
   right: 0;
   left: auto;
   height: 100vh;

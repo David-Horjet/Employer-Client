@@ -9,7 +9,7 @@ import Employee from "./Employee";
 
 function DashboardContainer({totalEmployees, employees}) {
   return (
-    <Container className="bg-light col-lg-3">
+    <Container className="bg-light col-lg-9">
       <div className="container-fluid">
         <div className="page-header">
           <div className="row align-items-center">
@@ -24,7 +24,7 @@ function DashboardContainer({totalEmployees, employees}) {
             <div className="col-sm-6">
               <ol className="breadcrumb pull-right">
                 <li className="breadcrumb-item">
-                  <Link to="index.html">
+                  <Link to="/">
                     <FaHome />
                   </Link>
                 </li>
@@ -159,8 +159,6 @@ function DashboardContainer({totalEmployees, employees}) {
 }
 
 const Container = styled.div`
-  flex: 0 0 auto;
-  width: 78%;
   right: 0;
   left: auto;
   height: 100vh;
@@ -395,6 +393,15 @@ const Container = styled.div`
       }
     }
   }
+  @media (max-width: 768px) {
+    .card {
+      .card-body {
+        .light-box {
+          // flex-direction: column;
+        }
+      }
+    }
+}
 `;
 
 export default DashboardContainer;

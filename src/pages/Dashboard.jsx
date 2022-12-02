@@ -43,7 +43,10 @@ function Dashboard() {
 
 const Container = styled.div`
 overflow: hidden;
-main {
+@media (max-width: 992px) {
+  .row {#......m.j
+    flex-direction: column;
+  }
 }
 `;
 

@@ -6,7 +6,7 @@ import { NavLink, Link } from "react-router-dom";
 function SideNav() {
   return (
     <>
-      <Container className="sidenav p-3">
+      <Container className="sidenav col-lg-3 p-3">
         <div id="mainsidebar">
           <Link to="index.html" className="logo d-flex align-items-center">
             <MdPersonAddAlt1 />
@@ -15,7 +15,7 @@ function SideNav() {
           <ul className="sidebar-menu custom-scrollbar">
             <li className="sidebar-item">
               <NavLink to="/" className="sidebar-link only-link">
-                <MdOutlineDashboard/>
+                <MdOutlineDashboard />
                 <span>Dashboard</span>
                 <div className="according-menu">
                   <i className="fa fa-angle-right"></i>
@@ -24,7 +24,7 @@ function SideNav() {
             </li>
             <li className="sidebar-item">
               <NavLink to="/new" className="sidebar-link only-link">
-                <MdPersonAddAlt1/>
+                <MdPersonAddAlt1 />
                 <span>Add Employee</span>
                 <div className="according-menu">
                   <i className="fa fa-angle-right"></i>
@@ -33,7 +33,7 @@ function SideNav() {
             </li>
             <li className="sidebar-item">
               <NavLink to="/all" className="sidebar-link only-link">
-                <MdPeople/>
+                <MdPeople />
                 <span>All Employees</span>
                 <div className="according-menu">
                   <i className="fa fa-angle-right"></i>
@@ -48,10 +48,6 @@ function SideNav() {
 }
 
 const Container = styled.div`
-  flex: 0 0 auto;
-  width: 22%;
-  padding: 0;
-  /* position: fixed; */
   border-bottom: none;
   top: 0;
   z-index: 9;
@@ -136,14 +132,59 @@ const Container = styled.div`
         }
       }
       a.active {
-          color: var(--theme-color);
-          border-left: 5px solid var(--theme-color);
-          -webkit-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-          position: relative;
-          background-color: #f1f2f8;
-        }
+        color: var(--theme-color);
+        border-left: 5px solid var(--theme-color);
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        position: relative;
+        background-color: #f1f2f8;
+      }
     }
+  }
+
+  @media (max-width: 992px) {
+      height: 60px;
+      padding: 5px !important;
+      #mainsidebar {
+        display: flex;
+        height: 100%;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+          height: 100%;
+          span {
+            font-size: 20px;
+          }
+        }
+        .sidebar-menu {
+          overflow: hidden;
+          height: 100%;
+          margin-top: 0;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          li {
+            margin-bottom: 0;
+            a {
+              padding: 5px 10px;
+            }
+          }
+        }
+      }
+  }
+  @media (max-width: 768px) {
+      #mainsidebar {
+        .sidebar-menu {
+          li {
+            a {
+              padding: 5px 10px;
+              span {
+                display: none;
+              }
+            }
+          }
+        }
+      }
   }
 `;
 
